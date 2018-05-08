@@ -26,7 +26,8 @@ public class EmpresaRepositoryTest {
 	
 	@Before
 	public void setUp() throws Exception{
-		empresaRepository.save(obterDadosEmpresa());
+		Empresa empresa = empresaRepository.save(obterDadosEmpresa());
+		System.out.println(empresa.getCnpj());
 	}
 	
 	@After
@@ -34,12 +35,12 @@ public class EmpresaRepositoryTest {
 		empresaRepository.deleteAll();
 	}
 	
-	/*@Test
+	@Test
 	public void testBuscarPorCnpj() {
-		Empresa empresa = empresaRepository.findByCnpj(CNPJ);
+		Empresa empresa = empresaRepository.findByCnpj("5146365000100");
 		
 		assertNotNull(empresa);
-	}*/
+	}
 	
 	@Test
 	public void testBuscarPorCnpjParaCnpjInvalido() {
@@ -53,6 +54,8 @@ public class EmpresaRepositoryTest {
 		Empresa empresa = new Empresa();
 		empresa.setCnpj(CNPJ);
 		empresa.setRazaoSocial("BANCO DO BRASIL");
+		
+		
 		
 		return empresa;
 	}
