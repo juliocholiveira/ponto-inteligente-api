@@ -1,5 +1,6 @@
 package com.jcho.pontointeligente.api.repositories;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
@@ -34,12 +35,12 @@ public class EmpresaRepositoryTest {
 		empresaRepository.deleteAll();
 	}
 	
-	/*@Test
+	@Test
 	public void testBuscarPorCnpj() {
 		Empresa empresa = empresaRepository.findByCnpj(CNPJ);
 		
-		assertNotNull(empresa);
-	}*/
+		assertEquals(CNPJ, empresa.getCnpj());
+	}
 	
 	@Test
 	public void testBuscarPorCnpjParaCnpjInvalido() {
