@@ -1,6 +1,5 @@
 package com.jcho.pontointeligente.api.repositories;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
@@ -27,12 +26,12 @@ public class EmpresaRepositoryTest {
 	
 	@Before
 	public void setUp() throws Exception{
-		this.empresaRepository.save(obterDadosEmpresa());
+		empresaRepository.save(obterDadosEmpresa());
 	}
 	
 	@After
 	public final void tearDown() {
-		this.empresaRepository.deleteAll();
+		empresaRepository.deleteAll();
 	}
 	
 	@Test
