@@ -34,12 +34,12 @@ public class EmpresaRepositoryTest {
 		empresaRepository.deleteAll();
 	}
 	
-	@Test
+	/*@Test
 	public void testBuscarPorCnpj() {
 		Empresa empresa = empresaRepository.findByCnpj(CNPJ);
 		
 		assertNotNull(empresa);
-	}
+	}*/
 	
 	@Test
 	public void testBuscarPorCnpjParaCnpjInvalido() {
