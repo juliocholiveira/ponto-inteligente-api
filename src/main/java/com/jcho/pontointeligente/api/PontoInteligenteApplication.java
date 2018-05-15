@@ -17,7 +17,7 @@ public class PontoInteligenteApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner() {
 		return args -> {
-			String senha1 = PasswordUtils.geraBCrypt("123456");
+			String senha1 = PasswordUtils.gerarBCrypt("123456");
 			System.out.println("Senha 1: " + senha1);
 		};
 	}

@@ -98,7 +98,7 @@ public class FuncionarioRepositoryTest {
 		funcionario.setEmpresa(empresa);
 		funcionario.setNome("JÚLIO CÉSAR HENRIQUE DE OLIVEIRA");
 		funcionario.setPerfil(PerfilEnum.ROLE_ADMIN);
-		funcionario.setSenha(PasswordUtils.geraBCrypt("123456"));
+		funcionario.setSenha(PasswordUtils.gerarBCrypt("123456"));
 		
 		return funcionario;
 	}
