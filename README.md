@@ -2,3 +2,4 @@
 
 # Ponto Inteligente
 API do sistema de ponto eletrônico inteligente.
+Importado para o STS no windows.
